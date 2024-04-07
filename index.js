@@ -17,7 +17,7 @@ io.on('connection', (socket) =>{
     console.log('Un cliente se a conectado')
 
     socket.on('signal', (userid) => {
-        console.log('se esta trasmitiendo....')
+        console.log('usuario transimitiendo....', userid)
         socket.broadcast.emit('signal', userid)
     })
 
